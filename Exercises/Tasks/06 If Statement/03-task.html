@@ -30,7 +30,14 @@
         let totalPriceProduct2 = productPrice2 * productQuantity2; 
         let totalPriceProduct3 = productPrice3 * productQuantity3; 
 
+        let confirmed = confirm("Вы будите заказывать доставку?"); //Сделал запрос на доставку
+
         let total = totalPriceProduct1 + totalPriceProduct2 + totalPriceProduct3;
+
+        if(confirmed) { //использовал оператор if
+            total += 40;
+        }
+
         console.log(`Общая сумма по продукту '${product1}' составляет ${totalPriceProduct1}`);
         console.log(`Общая сумма по продукту '${product2}' составляет ${totalPriceProduct2}`);
         console.log(`Общая сумма по продукту '${product3}' составляет ${totalPriceProduct3}`);

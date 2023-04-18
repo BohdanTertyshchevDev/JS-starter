@@ -16,11 +16,16 @@
         let productQuantity = 50;  // количество единиц товара на складе
 
         let count = prompt("Сколько единиц товара Вы хотите приобрести?", 1);
-        let totalSum = count * productPrice;
-        let leftInStorage = productQuantity - count;
+        if (count > 50) {
+            alert("На складе нет такого количества тoвара");
+        } else if (count > 0 && count <= 50) {
+            let totalSum = count * productPrice;
+            let leftInStorage = productQuantity - count;
 
-        alert("Общая стоимость " + totalSum);
-        alert("Количество товара останется на складе после покупки" + leftInStorage);
+            alert("Общая стоимость " + totalSum);
+            alert("Количество товара останется на складе после покупки" + leftInStorage);
+        }
+        
     </script>
 </body>
 </html>
