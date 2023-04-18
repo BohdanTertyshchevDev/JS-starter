@@ -18,6 +18,12 @@
     <script>
         let productPrice = 101.5; // цена товара
         let productQuantity = 50;  // количество единиц товара на складе
+
+        let howMuchProductsUserWantBy = prompt("Сколько единиц товара вы хотите купить?: ");
+        let countProduct = Number(howMuchProductsUserWantBy);
+
+        let messageForUser = alert(`Вы должны внести ${countProduct * productPrice}`);
+        let messageForUser2 = alert(`На складе осталось ${productQuantity - countProduct} единиц товара`);
     </script>
 </body>
 

@@ -16,8 +16,12 @@
         let screenWidth = 1980; // ширина экрана
         let margins = 10; // отступы межу блоками с описанием товара
         let desieredBlockCount = 5; // количество блоков с описанием, которые должны отобразиться в одну строку
+        let marginsCount = desieredBlockCount + 1;
 
         let width = null; // рассчитайте ширину блока и запишите в эту переменную
+        width = (screenWidth - (marginsCount * margins)) / desieredBlockCount;
+        console.log(width);
+        
     </script>
 </body>
 </html>

@@ -15,14 +15,20 @@
     </pre>
     <script>
         console.log("Вычисление объема цилиндра.");
+        let valueR = prompt("Введите значение радиуса: ");
+        let valueH = prompt("Введите знаечние высоты: ");
+
+        let r = Number(valueR);
+        let h = Number(valueH);
         //  V=π * r в квадрате * h
         let V;
         const Pi = 3.1415926535; // правильно использовать константу для подобных значений
-        let r = 10; // радиус
-        let h = 20; // высота
+        //let r = 10; // радиус
+        //let h = 20; // высота
 
         V = Pi * r * r * h;
         console.log(V);
+        console.log(`Объем цилиндра с высотой ${h} и радиусом ${r} = ${V}`);
     </script>
 </body>
 
