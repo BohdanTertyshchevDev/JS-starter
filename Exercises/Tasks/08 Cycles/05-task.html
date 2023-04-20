@@ -28,6 +28,32 @@
         Сценарий: Правильно! Загаданное значение 56. Вы угадали с 4й попытки. 
     </pre>
     <script>
+        let randomValue = Math.floor(Math.random() * 101);
+        let sum = 0;
+
+        while(true) {
+            sum++;
+            let value = +prompt("Угадай чиcло");
+            if(value == randomValue) {
+                alert("You are win");
+                alert(`Правильно! Загаданное значение ${value}.`);
+                break;
+            }
+            if (value < randomValue) {
+                alert("Введите значение больше");
+                continue;
+            }
+            if (value > randomValue) {
+                alert("Введите значение меньше");
+                continue;
+            }
+
+            sum += value;
+        }
+        alert("Сумма введеных попыток" + " " + sum);
+        
+            
+            
         
     </script>
 </body>
