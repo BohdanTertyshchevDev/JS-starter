@@ -19,23 +19,26 @@
 
         let adult, specialization, position;
 
-        if (age > 18)
-        {
-            adult = "совершеннолетний";
-        }
-        else
-        {
-            adult = "несовершеннолетний"
-        }
+        adult = age > 18 ? "совершеннолетний" : "несовершеннолетний";
 
-        if (technology == 1)
-        {
-            specialization = "Frontend";
-        }
-        else
-        {
-            specialization = "Backend";
-        }
+        // if (age > 18)
+        // {
+        //     adult = "совершеннолетний";
+        // }
+        // else
+        // {
+        //     adult = "несовершеннолетний"
+        // }
+         
+        specialization = technology == 1 ? "Frontend" : "Backend";
+        // if (technology == 1)
+        // {
+        //     specialization = "Frontend";
+        // }
+        // else
+        // {
+        //     specialization = "Backend";
+        // }
 
         if (expirience == 0)
         {

@@ -33,11 +33,34 @@
         let totalPriceProduct3 = productPrice3 * productQuantity3;
 
         let total = totalPriceProduct1 + totalPriceProduct2 + totalPriceProduct3;
+
         console.log(`Общая сумма по продукту '${product1}' составляет ${totalPriceProduct1}`);
         console.log(`Общая сумма по продукту '${product2}' составляет ${totalPriceProduct2}`);
         console.log(`Общая сумма по продукту '${product3}' составляет ${totalPriceProduct3}`);
+        
+        if (total >= 500 && total < 1000) {
+            discount = total * 5 / 100;
+            total -= discount;
+            alert(`Стоимость заказа с учетом скидки ${total}, а сумма скидки ${discount}`);
+            let shipping = confirm("Заказываете доставку курьером?");
+        } else if (total >=1000 && total < 1500 ) {
+            discount = total * 10 / 100;
+            total -= discount;
+            alert(`Стоимость заказа с учетом скидки ${total}, а сумма скидки ${discount}`);
+            let shipping = confirm("Заказываете доставку курьером?");
+        } else if (total >=1500 ) {
+            discount = total * 15 / 100;
+            total -= discount;
+            alert(`Стоимость заказа с учетом скидки ${total}, а сумма скидки ${discount}`);
+            alert(`Доставка для вас бесплатная`);
+        } else if (total > 0 && total < 500) {
+            alert(`Скидки не будет стоимость заказа ${total}`);
+            let shipping = confirm("Заказываете доставку курьером?");
+        } else {
+            alert(`Вы не заказали ничего`);
+        }      
 
-        let shipping = confirm("Заказываете доставку курьером?");
+
         if (shipping)
         {
             total += 40;
