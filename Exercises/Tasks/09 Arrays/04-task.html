@@ -13,6 +13,19 @@
     </pre>
     <script>
         let values = [10, 20, 5, 7, 11, 8, 125, 4, 8, 3, 23];
+        let even = []; // chetnie
+        let odd = []; // nechentie
+        
+        for (let index = 0; index < values.length; index++) {
+            if(values[index] % 2 == 0) {
+                let result = even.push(values[index]);
+            }
+            if(values[index] % 2 != 0) {
+                let result = odd.push(values[index]);
+            }
+        }
+        console.log(even);
+        console.log(odd);
     </script>
 </body>
 </html>

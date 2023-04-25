@@ -12,6 +12,17 @@
     </pre>
     <script>
         let values = [10, 20, 4, 6, 11, 9, 125, 10, 8, 0, 3, 5, 89, 12, 46, 77, 3];
+
+        var arr2 = [];
+
+        for (i in values) {
+        if (arr2[values[i]] != undefined) {
+            (arr2[values[i]] ++)
+        } else {
+            (arr2[values[i]] = 1)
+        }
+        }
+        console.log(arr2); 
     </script>
 </body>
 </html>

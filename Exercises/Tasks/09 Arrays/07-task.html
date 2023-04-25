@@ -13,6 +13,25 @@
     </pre>
     <script>
         let values = [10, 20, 48, 6, 11, 9, 125, 1, 8, 0, 3, 255, 77, 11, 170, 4, 28 ];
+
+        let sum = 0;
+        for (let index = 0; index < values.length; index++) {
+            const element = values[index];
+            sum += element;
+        }
+        let countElementsArr = values. length;
+        let averageCount = sum / countElementsArr;
+        console.log(sum);
+        console.log(countElementsArr);
+        console.log(averageCount);
+
+        for (let index = 0; index < values.length; index++) {
+            const element = values[index];
+            if(element > averageCount) {
+                console.log(element);
+            }
+        }
+        
         
     </script>
 </body>

@@ -12,6 +12,37 @@
     </pre>
     <script>
         let values = [10, 20, 4, 6, 11, 9, 125, 1, 8, 0, 3];
+        let max = Number.MIN_VALUE;
+        let min = Number.MIN_VALUE;
+
+        //Максимальное число
+        for (let index = 0; index < values.length; index++) {
+            const element = values[index];
+            if (element > max) {
+                max = element;
+            }
+        }
+
+        console.log("Максимальное значение" + " " + max);
+
+        //минимальное число
+        for(let index = 0; index < values.length; index++) {
+            const element = values[index];
+            if( element < min) {
+                min = element;
+            }
+        }
+
+        console.log("Минимальное значение" + " " + min);
+
+        let sum = 0;
+        for (let index = 0; index < values.length; index++) {
+            const element = values[index];
+            sum += element;
+        }
+        console.log(sum)
+        
+        
     </script>
 </body>
 </html>

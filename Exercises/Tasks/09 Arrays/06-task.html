@@ -12,6 +12,29 @@
     </pre>
     <script>
         let values = [10, 20, 4, 6, 11, 9, 125, 1, 8, 0, 3];
+        let max = Number.MIN_VALUE;
+        let min = Number.MAX_VALUE;
+
+        let indexMax, indexMin;
+
+        for (let index = 0; index < values.length; index++) {
+            const element = values[index];
+            if (element > max) {
+                max = element;
+                indexMax = index;
+            }
+            if( element < min) {
+                min = element;
+                indexMin = index;
+            }
+        }
+        values[indexMax] = min;
+        values[indexMin] = max;
+        
+        
+        for( let value of values) {
+            console.log(value);
+        }
     </script>
 </body>
 </html>
